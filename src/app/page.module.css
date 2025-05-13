@@ -1,0 +1,42 @@
+.page {
+  background-image: url(../image/bg.svg);
+  background-size: contain;
+  background-repeat: repeat;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.page::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #d3d3d3;
+  opacity: 0.8;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+.containt {
+  position: absolute;
+  width: 425px;
+  height: 100vh;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #172031;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .containt {
+    width: 100%;
+  }
+}
+
+/* ===>>>===>>>===>>> <<<===<<<===<<<=== */
+
+.tab {
+  color: #ffffff !important;
+}
