@@ -28,11 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${styles.page}`}>
         <div className={styles.containt}>
-          {/* <Script
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9987228570589642"
+          <Script
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4238460264484843"
             strategy="beforeInteractive"
-            crossOrigin="anonymous"
-          <Script strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-GVVK8J5NXG"></Script> */}
+            crossOrigin="anonymous" />
           <UserProvider>
             <SetLayout children={children} />
           </UserProvider>

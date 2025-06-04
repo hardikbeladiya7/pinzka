@@ -11,7 +11,7 @@ const StartPage = () => {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://thorient.com/ad_script.js';
+    script.src = '/ad_script.js';
     script.async = true;
     document.body.appendChild(script);
 
@@ -28,8 +28,8 @@ const StartPage = () => {
           <ins
             className="adsbygoogle"
             style={{ display: 'block' }}
-            data-ad-client="ca-pub-9987228570589642"
-            data-ad-slot="9890041426"
+            data-ad-client="ca-pub-4238460264484843"
+            data-ad-slot="9018076593"
             data-ad-format="auto"
             data-full-width-responsive="true"
           />
@@ -40,7 +40,7 @@ const StartPage = () => {
             width="150px"
             height="150px"
           />
-          <h2 style={{ fontSize: '20px', color:"#000000" }}>You have got <span style={{ color: '#30d158' }}>{getUserCoin()}</span> coins</h2>
+          <h2 style={{ fontSize: '20px', color: "#000000" }}>You have got <span style={{ color: '#30d158' }}>{getUserCoin()}</span> coins</h2>
           <Button
             className="contained_button"
             variant="contained"

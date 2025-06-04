@@ -42,27 +42,16 @@ const MainPage = () => {
     }
   ];
 
-  // useEffect(() => {
-  //   const script = document.createElement('script');
-  //   script.src = 'https://thorient.com/ad_script.js';
-  //   script.async = true;
-  //   document.body.appendChild(script);
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/ad_script.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-  //   const script1 = document.createElement('script');
-
-  //   script1.innerHTML = `
-  //     window.dataLayer = window.dataLayer || [];
-  //     function gtag(){dataLayer.push(arguments);}
-  //     gtag('js', new Date());
-  //     gtag('config', 'G-GVVK8J5NXG');
-  //   `;
-
-  //   document.head.appendChild(script1);
-  //   return () => {
-  //     document.head.removeChild(script1);
-  //     document.body.removeChild(script);
-  //   };
-  // }, []);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const isCorrectAnswer = (option: string | null, ans: any) => {
     setDisable(true);
@@ -104,14 +93,12 @@ const MainPage = () => {
   return (
     <Box className="quiz_main" sx={{ borderBottom: 1, borderColor: "divider", padding: "15px" }}>
       <Box className="ad250" sx={{ height: '280px' }}>
-        {/* <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client="ca-pub-9987228570589642"
-          data-ad-slot="9890041426"
+        <ins className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-4238460264484843"
+          data-ad-slot="9018076593"
           data-ad-format="auto"
-          data-full-width-responsive="true"
-        /> */}
+          data-full-width-responsive="true"></ins>
       </Box>
       {questions[currentQuestionIndex] ? (
         <LinearProgress
@@ -195,11 +182,11 @@ const MainPage = () => {
           <h2 style={{ textAlign: 'center', color: '#FFFFFF', marginTop: '150px' }}>Quiz not found</h2>
         )}
       </Box>
-      <Box sx={{display:'flex', alignItems:'center', gap:'3px', marginTop:'10px', justifyContent:'center'}}>
-        <a href="" style={{color:'#ffb540', fontSize:'16px', fontWeight:'600'}}>Sign-Up</a>
-        <a href="" style={{color:'#ffb540', fontSize:'16px', fontWeight:'600'}}>or Login</a>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: '3px', marginTop: '10px', justifyContent: 'center' }}>
+        <a href="" style={{ color: '#ffb540', fontSize: '16px', fontWeight: '600' }}>Sign-Up</a>
+        <a href="" style={{ color: '#ffb540', fontSize: '16px', fontWeight: '600' }}>or Login</a>
       </Box>
-      <Box className="play_coins_details" sx={{marginTop:'40px'}}>
+      <Box className="play_coins_details" sx={{ marginTop: '40px' }}>
         <h1 style={{ color: '#FFFFFF', fontSize: '18px', marginBottom: '15px' }}>Play Quiz and Win Coins!</h1>
         <ul style={{ textAlign: 'start' }}>
           <li>Play Quizzes in 25+ categories like GK, Sports, Bollywood, Business, Cricket & more!</li>
@@ -209,7 +196,7 @@ const MainPage = () => {
         </ul>
       </Box>
       <Box className="quiz_box" sx={{ marginBottom: '30px' }}>
-        <h2 style={{ textAlign: "center", fontSize: "24px", color: '#ffffff', marginBottom:'5px' }}>Fun Facts</h2>
+        <h2 style={{ textAlign: "center", fontSize: "24px", color: '#ffffff', marginBottom: '5px' }}>Fun Facts</h2>
         <p style={{ color: '#FFFFFF', fontSize: '16px' }}>The insurance industry is one of the largest industries in the United States, with over $1.5 trillion in annual premiums.The word "insurance" comes from the French word "assurer", which means "to make sure". The first insurance company in the United States was founded in Charleston, South Carolina, in 1735.The insurance industry employs over 2 million people in the United States. The average American household spends about $1,500 per year on insurance premiums. The most expensive type of insurance in the United States is long-term care insurance, which can cost upwards of $5,000 per month.</p>
       </Box>
     </Box >
