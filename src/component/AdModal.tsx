@@ -37,7 +37,7 @@ const AdModal = ({ open, close, noTime, id }: any): any => {
             // document.body.appendChild(script);
 
             const script1 = document.createElement('script');
-            script1.src = 'https://thorient.com/ad_script.js';
+            script1.src = '/ad_script.js';
             script1.async = true;
             document.body.appendChild(script1);
 
@@ -86,8 +86,8 @@ const AdModal = ({ open, close, noTime, id }: any): any => {
                     <ins className="adsbygoogle"
                         style={{ display: 'block' }}
                         data-ad-format="autorelaxed"
-                        data-ad-client="ca-pub-9987228570589642"
-                        data-ad-slot="6075632760"></ins>
+                        data-ad-client="ca-pub-4238460264484843"
+                        data-ad-slot="6288805622"></ins>
                     {/* <div className="gcse-search"></div> */}
                 </Box>
             </DialogContent>

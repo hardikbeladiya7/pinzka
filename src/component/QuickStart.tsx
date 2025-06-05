@@ -49,14 +49,12 @@ const QuickStart = () => {
       sx={{ borderBottom: 1, borderColor: "divider", padding: "15px" }}
     >
       <Box className="ad250">
-        <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client="ca-pub-9987228570589642"
-          data-ad-slot="9890041426"
+        <ins className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-4238460264484843"
+          data-ad-slot="9018076593"
           data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
+          data-full-width-responsive="true"></ins>
       </Box>
       <Box>
         <h1 style={{ textAlign: "center", fontSize: "24px" }}>Quick Start!</h1>
@@ -168,7 +166,7 @@ const QuickStart = () => {
           </Box>
         </Box>
         <Box className="quiz_box">
-          <h2 style={{ textAlign: "center", fontSize: "24px", color:'#3b82f6' }}>Fun Facts</h2>
+          <h2 style={{ textAlign: "center", fontSize: "24px", color: '#3b82f6' }}>Fun Facts</h2>
           <p>
             Mahendara Singh Dhoni clenches a title of being the most successful
             captain in the IPL history.

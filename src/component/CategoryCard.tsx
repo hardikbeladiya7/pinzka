@@ -57,7 +57,7 @@ const CategoryCard = ({ item, index }: any) => {
     }
 
     const script = document.createElement('script');
-    script.src = 'https://thorient.com/ad_script.js';
+    script.src = '/ad_script.js';
     script.async = true;
     document.body.appendChild(script);
 
@@ -73,22 +73,22 @@ const CategoryCard = ({ item, index }: any) => {
         <ins className="adsbygoogle"
           style={{ display: "block" }}
           data-ad-format="fluid"
-          data-ad-layout-key="-hz+f-r-4c+aj"
-          data-ad-client="ca-pub-9987228570589642"
-          data-ad-slot="3739703600"></ins>
+          data-ad-layout-key="-f9+5v+4m-d8+7b"
+          data-ad-client="ca-pub-4238460264484843"
+          data-ad-slot="9461763874"></ins>
       </Box> : null}
       <Box className='categoryCard'>
         <Box className='category_card'>
           <Box className='category_img'>
-              <img className='category_img' src={item.img ?? 'https://cdn.unibots.in/quiz/images/grammar.png'} />
+            <img className='category_img' src={item.img ?? 'https://cdn.unibots.in/quiz/images/grammar.png'} />
           </Box>
-          <Box sx={{display:'flex', gap:'5px', textAlign:'end', alignItems:'center'}}>
+          <Box sx={{ display: 'flex', gap: '5px', textAlign: 'end', alignItems: 'center' }}>
             <Box>
               <Box className='category_title_main' sx={{ minWidth: '58%', }}>
                 <p className='sports_title' >{item.category.name}&nbsp;|&nbsp;{item.title}</p>
                 <p className='play_win_text'>Play & Win <img className='playerstorage-img' src="https://playerstorage.b-cdn.net/quiztwiz/assets/coin.svg" alt="" />{item.totalPrice}</p>
-                <Box sx={{display:'flex', justifyContent:'end'}}>
-                   <p className='entry_fee_text'>Entry fee<img className='playerstorage-img' src="https://playerstorage.b-cdn.net/quiztwiz/assets/coin.svg" alt="" />{item.entryFee}</p>
+                <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+                  <p className='entry_fee_text'>Entry fee<img className='playerstorage-img' src="https://playerstorage.b-cdn.net/quiztwiz/assets/coin.svg" alt="" />{item.entryFee}</p>
                 </Box>
               </Box>
             </Box>

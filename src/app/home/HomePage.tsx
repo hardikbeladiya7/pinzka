@@ -72,7 +72,7 @@ export default function Home() {
     })()
 
     const script = document.createElement('script');
-    script.src = 'https://thorient.com/ad_script.js';
+    script.src = '/ad_script.js';
     script.async = true;
     document.body.appendChild(script);
 
@@ -127,14 +127,12 @@ export default function Home() {
             </Button> */}
           </Box>
           <Box className="ad250">
-            <ins
-              className="adsbygoogle"
-              style={{ display: 'block' }}
-              data-ad-client="ca-pub-9987228570589642"
-              data-ad-slot="9890041426"
+            <ins className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-4238460264484843"
+              data-ad-slot="9018076593"
               data-ad-format="auto"
-              data-full-width-responsive="true"
-            />
+              data-full-width-responsive="true"></ins>
           </Box>
           <Tabs
             value={tabValue}
@@ -144,13 +142,13 @@ export default function Home() {
             sx={{ color: 'white', borderBottom: '1px solid #ffb540', paddingBottom: '20px' }}
             key={'category_tabs'}
           >
-            <Tab  key={'all'} className={styles.tab} label="All" {...a11yProps(0)} onClick={() => getAllQuizzes()} />
+            <Tab key={'all'} className={styles.tab} label="All" {...a11yProps(0)} onClick={() => getAllQuizzes()} />
             {
               categories.map((ele: any) => {
                 return <Tab
                   key={Math.random() * new Date().getTime()}
                   className={styles.tab}
-                  sx={{ border: '2px solid #ffb540', borderRadius: '50px', margin: '0 5px', minHeight:'40px', maxHeight:'40px' }}
+                  sx={{ border: '2px solid #ffb540', borderRadius: '50px', margin: '0 5px', minHeight: '40px', maxHeight: '40px' }}
                   label={ele.name}
                   value={ele.id}
                   {...a11yProps(1)}

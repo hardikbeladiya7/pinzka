@@ -37,7 +37,7 @@ const Quiz = () => {
     setOldUser();
 
     const script = document.createElement('script');
-    script.src = 'https://thorient.com/ad_script.js';
+    script.src = '/ad_script.js';
     script.async = true;
     document.body.appendChild(script);
 
@@ -100,14 +100,12 @@ const Quiz = () => {
   return (
     <Box className="quiz_main" sx={{ borderBottom: 1, borderColor: "divider", padding: "15px" }}>
       <Box className="ad250">
-        <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client="ca-pub-9987228570589642"
-          data-ad-slot="9890041426"
+        <ins className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-4238460264484843"
+          data-ad-slot="9018076593"
           data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
+          data-full-width-responsive="true"></ins>
       </Box>
       {questions[currentQuestionIndex] ? (
         <LinearProgress
@@ -213,7 +211,7 @@ const ShowResult = ({ showResult }: any) => {
   useEffect(() => {
 
     const script = document.createElement('script');
-    script.src = 'https://thorient.com/ad_script.js';
+    script.src = '/ad_script.js';
     script.async = true;
     document.body.appendChild(script);
 
@@ -230,14 +228,12 @@ const ShowResult = ({ showResult }: any) => {
       />
       {showResult && <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "15px" }}>
         <Box className="ad250">
-          <ins
-            className="adsbygoogle"
-            style={{ display: 'block' }}
-            data-ad-client="ca-pub-9987228570589642"
-            data-ad-slot="9890041426"
+          <ins className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-4238460264484843"
+            data-ad-slot="9018076593"
             data-ad-format="auto"
-            data-full-width-responsive="true"
-          />
+            data-full-width-responsive="true"></ins>
         </Box>
         <Box className="victory_main" sx={{ textAlign: "center" }}>
           <img
