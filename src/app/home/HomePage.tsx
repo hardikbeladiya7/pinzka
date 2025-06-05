@@ -1,18 +1,16 @@
 "use client";
 import useQuiz from "@/hooks/useQuiz";
-import { Button, Tabs } from "@mui/material";
+import { Tabs } from "@mui/material";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useContext, useEffect, useState } from "react";
 // import styles from "./../app/page.module.css";
-import styles from "../../app/page.module.css";
-import WelcomeModal from "@/modal/WelcomeModal";
-import useCoin from "@/hooks/useCoin";
-import { UserContext } from "@/context/UserContext";
-import React from "react";
 import CategoryCard from "@/component/CategoryCard";
-import HomeIcon from "@mui/icons-material/Home";
+import { UserContext } from "@/context/UserContext";
+import useCoin from "@/hooks/useCoin";
+import React from "react";
+import styles from "../../app/page.module.css";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -54,12 +52,15 @@ const a11yProps = (index: number) => {
 
 export default function Home() {
   const router = useRouter();
-  const [tabValue, setTabValue] = useState(0);
   const [categories, setCategories] = useState<Categories[]>([]);
   const [quizzes, setQuizzes] = useState([]);
   const [quizzesT, setQuizzesT] = useState([]);
 
-  const { fetchCategories, fetchQuizByCategory, fetchQuizzes } = useQuiz();
+  const searchParams = useSearchParams();
+  const category = searchParams.get("category");
+  const [tabValue, setTabValue] = useState(0);
+
+  const { fetchCategories, fetchQuizzes } = useQuiz();
   const { setOldUser } = useCoin();
   const { modal, setModal } = useContext<any>(UserContext);
 
@@ -76,23 +77,20 @@ export default function Home() {
     script.async = true;
     document.body.appendChild(script);
 
-    const script1 = document.createElement('script');
-
-    script1.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GVVK8J5NXG');
-    `;
-
-    document.head.appendChild(script1);
     return () => {
-      document.head.removeChild(script1);
       document.body.removeChild(script);
     };
   }, []);
 
-  const callQuizzes = async (categoryId: number) => {
+  useEffect(() => {
+    if (category) {
+      const index = categories.findIndex((ele: any) => ele._id === category);
+      setTabValue(index + 1);
+      callQuizzes(category);
+    }
+  }, [quizzesT])
+
+  const callQuizzes = async (categoryId: any) => {
     if (categoryId) {
       const quiz1 = quizzesT.filter((ele: any) => ele.category._id === categoryId)
       // const quiz: any = await fetchQuizByCategory(categoryId)
@@ -101,6 +99,10 @@ export default function Home() {
   }
 
   const getAllQuizzes = useCallback(async () => {
+    if (category) {
+      setTabValue(0);
+      router.push('/home')
+    }
     const allQuizzes = await fetchQuizzes();
     setQuizzes(allQuizzes.data.data);
     setQuizzesT(allQuizzes.data.data);

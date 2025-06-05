@@ -57,6 +57,7 @@ const SetLayout = React.memo(({ children }: any) => {
       }
       <Main style={{ overflow: "auto", padding: "0px", height: pathname !== '/' && pathname !== '/start' ? '94vh' : '100vh', marginTop: pathname !== '/' && pathname !== '/start' ? '60px' : '0px', paddingBottom: pathname !== '/' && pathname !== '/start' ? '70px' : '0px' }}>
         {children}
+        <Box marginBottom={'25px'} />
         <Box className="fixed_bottom_button">
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
             <Box sx={{ textAlign: 'center', width:'100px' }} onClick={() => router.push('/category')} className={pathname === '/category' ? "active" : ""}>

@@ -80,13 +80,13 @@ const DrawerSide = React.memo(() => {
                     >
                         Play Quiz
                     </Typography>
-                    <Box sx={{display:'flex', alignItems:'center', gap:'10px'}}>
-                        <Box sx={{display:'flex', alignItems:'center', gap:'4px'}}>
-                            <Box sx={{marginBottom:'3px'}}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                            <Box sx={{ marginBottom: '3px' }}>
                                 <img className="gif_icon" src="https://playerstorage.b-cdn.net/quiztwiz/assets/rewardg.gif" alt="" />
                             </Box>
                             <Typography
-                                style={{ color: "#ffffff", fontWeight: "bold", fontSize:'12px' }}
+                                style={{ color: "#ffffff", fontWeight: "bold", fontSize: '12px' }}
                             >
                                 Daily Reward
                             </Typography>
@@ -124,7 +124,7 @@ const DrawerSide = React.memo(() => {
                         <Box>
                             <h2 style={{ fontSize: '19px', fontWeight: '700', color: '#ffffff' }}>Guest</h2>
                             <p style={{ fontSize: '14px', fontWeight: '700', color: '#ffb540', paddingTop: '3px', marginBottom: '10px' }}>Play Quiz & earn coins</p>
-                            <button className="sign-button">SIGN IN</button>
+                            {/* {!isUserLoggedIn() && <button className="sign-button" onClick={() => { router.push('/login') }}>SIGN IN</button>} */}
                         </Box>
                     </Box>
                     <IconButton onClick={handleDrawerClose} sx={{ position: 'absolute', right: '0', top: '0' }}>
@@ -135,7 +135,7 @@ const DrawerSide = React.memo(() => {
                 <List>
                     {[
                         { route: "/home", name: "Home", show: true },
-                        { route: "/quiz", name: "Random Quiz", show: true },
+                        // { route: "/quiz", name: "Random Quiz", show: true },
                         { route: "/contact-us", name: "Contact US", show: true },
                         { route: "/contest-rules", name: "Contest Rules", show: true },
                         { route: "/login", name: "Login", show: !isUserLoggedIn() },
@@ -152,7 +152,7 @@ const DrawerSide = React.memo(() => {
                             }}
                         >
                             <ListItemButton>
-                                <ListItemIcon sx={{display:'block', minWidth:'40px'}}>
+                                <ListItemIcon sx={{ display: 'block', minWidth: '40px' }}>
                                     {index === 0 ? (
                                         <HomeIcon style={{ color: "#FFFFFF" }} />
                                     ) : index === 1 ? (
