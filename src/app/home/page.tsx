@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Head from 'next/head'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Home from './HomePage';
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ const page = () => {
       <Head>
         <link rel="canonical" href={`https://quiz.thorient.com`} />
       </Head>
-      <Home />
+      <Suspense fallback='Loading...'><Home /></Suspense>
     </div>
   )
 }
