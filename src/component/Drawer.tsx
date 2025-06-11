@@ -61,7 +61,7 @@ const DrawerSide = React.memo(() => {
 
     return (
         <>
-            <Box sx={{ position: 'fixed', display: 'flex', justifyContent: 'space-between', width: '100%', padding: '10px 20px' }}>
+            <Box sx={{ position: 'fixed', display: 'flex',backgroundColor:'#191f31', zIndex:'1', justifyContent: 'space-between', width: '100%', padding: '10px 20px' }}>
                 <IconButton
                     color="inherit"
                     aria-label="open drawer"

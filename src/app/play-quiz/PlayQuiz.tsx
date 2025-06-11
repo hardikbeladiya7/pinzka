@@ -30,7 +30,8 @@ const PlayQuiz = () => {
     }
 
     return (
-        <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "15px" }}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "0" }}>
+            <Box sx={{ marginTop: '10px'}}></Box>
             <Box className="ad250">
                 <ins className="adsbygoogle"
                     style={{ display: "block" }}
@@ -39,35 +40,37 @@ const PlayQuiz = () => {
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
             </Box>
-            <Box className="contact_us_bg">
-                {/* <input placeholder="Email" />
+            <Box sx={{ marginTop: '10px', padding: '15px', paddingTop: '0' }}>
+                <Box className="contact_us_bg">
+                    {/* <input placeholder="Email" />
                 <input placeholder="Password" style={{ marginTop: "10px" }} /> */}
-                <Button
-                    className="contained_button"
-                    variant="contained"
-                    style={{ marginTop: '10px', width: '200px' }}
-                    onClick={joinNow}
-                >
-                    Join Now
-                </Button>
-                <p style={{ fontSize: '16px', color: '#FFFFFF', marginTop: '10px' }}>Or</p>
-                <Button
-                    className="contained_button"
-                    variant="contained"
-                    style={{ marginTop: '10px', width: '200px' }}
-                    onClick={() => {
-                        router.push(`/quiz?id=${id}`);
-                    }}
-                >
-                    Play as Guest
-                </Button>
-                <ul style={{ padding: '15px 0px 0px 15px', textAlign: 'left', color: '#FFFFFF' }}>
-                    <li>You got 200 seconds to answer all questions</li>
-                    <li>Answer as many questions as you can</li>
-                    <li>For Every Correct answer you will get 100 points and will loose -50 points on every Incorrect answer</li>
-                    <li>You can take help by using the lifelines present in the contest.</li>
-                    <li>Lifelines can be used for free or by using a given amount of coins for each lifeline.</li>
-                </ul>
+                    <Button
+                        className="contained_button"
+                        variant="contained"
+                        style={{ marginTop: '10px', width: '200px' }}
+                        onClick={joinNow}
+                    >
+                        Join Now
+                    </Button>
+                    <p style={{ fontSize: '16px', color: '#FFFFFF', marginTop: '10px' }}>Or</p>
+                    <Button
+                        className="contained_button"
+                        variant="contained"
+                        style={{ marginTop: '10px', width: '200px' }}
+                        onClick={() => {
+                            router.push(`/quiz?id=${id}`);
+                        }}
+                    >
+                        Play as Guest
+                    </Button>
+                    <ul style={{ padding: '15px 0px 0px 15px', textAlign: 'left', color: '#FFFFFF' }}>
+                        <li>You got 200 seconds to answer all questions</li>
+                        <li>Answer as many questions as you can</li>
+                        <li>For Every Correct answer you will get 100 points and will loose -50 points on every Incorrect answer</li>
+                        <li>You can take help by using the lifelines present in the contest.</li>
+                        <li>Lifelines can be used for free or by using a given amount of coins for each lifeline.</li>
+                    </ul>
+                </Box>
             </Box>
         </Box>
     );

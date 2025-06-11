@@ -50,12 +50,12 @@ const SetLayout = React.memo(({ children }: any) => {
   }, []);
 
   return (
-    <Box sx={{ display: "flex", overflow: "auto", height: "100%" }}>
+    <Box sx={{ display: "flex", }}>
       {pathname !== '/' && pathname !== '/start' ?
         <DrawerSide />
         : null
       }
-      <Main style={{ overflow: "auto", padding: "0px", height: pathname !== '/' && pathname !== '/start' ? '94vh' : '100vh', marginTop: pathname !== '/' && pathname !== '/start' ? '60px' : '0px', paddingBottom: pathname !== '/' && pathname !== '/start' ? '70px' : '0px' }}>
+      <Main style={{ overflow: "auto", padding: "0px", height: pathname !== '/' && pathname !== '/start' ? '100vh' : '100vh', paddingTop: pathname !== '/' && pathname !== '/start' ? '60px' : '0px', paddingBottom: pathname !== '/' && pathname !== '/start' ? '70px' : '0px' }}>
         {children}
         <Box marginBottom={'25px'} />
         <Box className="fixed_bottom_button">

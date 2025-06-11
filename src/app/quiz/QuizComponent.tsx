@@ -226,7 +226,8 @@ const ShowResult = ({ showResult }: any) => {
         strategy="beforeInteractive"
         crossOrigin="anonymous"
       />
-      {showResult && <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "15px" }}>
+      {showResult && <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "0" }}>
+        <Box sx={{ marginTop: '10px'}}></Box>
         <Box className="ad250">
           <ins className="adsbygoogle"
             style={{ display: "block" }}
@@ -235,32 +236,34 @@ const ShowResult = ({ showResult }: any) => {
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
         </Box>
-        <Box className="victory_main" sx={{ textAlign: "center" }}>
-          <img
-            src="https://fflivegame.com/_next/static/media/trophy.42834f31.gif"
-            width="150px"
-            height="150px"
-          />
-          <Button
-            className="contained_button"
-            variant="contained"
-            onClick={() => {
-              router.push("/result");
-            }}
-            style={{ marginTop: "20px" }}
-          >
-            Go to result
-          </Button>
-          <Button
-            className="contained_button"
-            variant="contained"
-            onClick={() => {
-              router.push("/home");
-            }}
-            style={{ marginTop: "20px" }}
-          >
-            Go to Home
-          </Button>
+        <Box sx={{ marginTop: '10px', padding:'15px', paddingTop:'0' }}>
+          <Box className="victory_main" sx={{ textAlign: "center" }}>
+            <img
+              src="https://fflivegame.com/_next/static/media/trophy.42834f31.gif"
+              width="150px"
+              height="150px"
+            />
+            <Button
+              className="contained_button"
+              variant="contained"
+              onClick={() => {
+                router.push("/result");
+              }}
+              style={{ marginTop: "20px" }}
+            >
+              Go to result
+            </Button>
+            <Button
+              className="contained_button"
+              variant="contained"
+              onClick={() => {
+                router.push("/home");
+              }}
+              style={{ marginTop: "20px" }}
+            >
+              Go to Home
+            </Button>
+          </Box>
         </Box>
       </Box>}
     </>

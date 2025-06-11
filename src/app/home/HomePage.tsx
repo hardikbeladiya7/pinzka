@@ -116,9 +116,9 @@ export default function Home() {
     <>
       {/* {modal && <WelcomeModal isOpen={modal} onClose={() => { setModal(false); setOldUser(); }} />} */}
       <div className="category_sec" style={{ overflow: "auto" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "15px" }}>
-          <Box sx={{ textAlign: 'end', marginBottom: '20px', }}>
-            {/* <Button
+        <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "0" }}>
+          {/* <Box sx={{ textAlign: 'end', marginBottom: '20px', }}>
+            <Button
               className="contained_button"
               style={{ width: 'fit-content', display: "flex", alignItems: 'center', gap: '10px', marginLeft: 'auto' }}
               variant="contained"
@@ -126,8 +126,9 @@ export default function Home() {
             >
               <CardGiftcardIcon />
               <p style={{ fontWeight: 'bold' }}>Get 1000 coin </p>
-            </Button> */}
-          </Box>
+            </Button>
+          </Box> */}
+          <Box sx={{ marginTop: '10px'}}></Box>
           <Box className="ad250">
             <ins className="adsbygoogle"
               style={{ display: "block" }}
@@ -136,40 +137,42 @@ export default function Home() {
               data-ad-format="auto"
               data-full-width-responsive="true"></ins>
           </Box>
-          <Tabs
-            value={tabValue}
-            onChange={handleChange}
-            variant="scrollable"
-            aria-label="basic tabs example"
-            sx={{ color: 'white', borderBottom: '1px solid #ffb540', paddingBottom: '20px' }}
-            key={'category_tabs'}
-          >
-            <Tab key={'all'} className={styles.tab} label="All" {...a11yProps(0)} onClick={() => getAllQuizzes()} />
-            {
-              categories.map((ele: any) => {
-                return <Tab
+          <Box sx={{ marginTop: '10px', padding: '15px', paddingTop: '0' }}>
+            <Tabs
+              value={tabValue}
+              onChange={handleChange}
+              variant="scrollable"
+              aria-label="basic tabs example"
+              sx={{ color: 'white', borderBottom: '1px solid #ffb540', paddingBottom: '20px' }}
+              key={'category_tabs'}
+            >
+              <Tab key={'all'} className={styles.tab} label="All" {...a11yProps(0)} onClick={() => getAllQuizzes()} />
+              {
+                categories.map((ele: any) => {
+                  return <Tab
+                    key={Math.random() * new Date().getTime()}
+                    className={styles.tab}
+                    sx={{ border: '2px solid #ffb540', borderRadius: '50px', margin: '0 5px', minHeight: '40px', maxHeight: '40px' }}
+                    label={ele.name}
+                    value={ele.id}
+                    {...a11yProps(1)}
+                    onClick={(e) => {
+                      callQuizzes(ele._id)
+                    }}
+                  />
+                })
+              }
+            </Tabs>
+            <CustomTabPanel value={tabValue} index={tabValue}>
+              {quizzes.map((item, i) => (
+                <CategoryCard
                   key={Math.random() * new Date().getTime()}
-                  className={styles.tab}
-                  sx={{ border: '2px solid #ffb540', borderRadius: '50px', margin: '0 5px', minHeight: '40px', maxHeight: '40px' }}
-                  label={ele.name}
-                  value={ele.id}
-                  {...a11yProps(1)}
-                  onClick={(e) => {
-                    callQuizzes(ele._id)
-                  }}
+                  item={item}
+                  index={i}
                 />
-              })
-            }
-          </Tabs>
-          <CustomTabPanel value={tabValue} index={tabValue}>
-            {quizzes.map((item, i) => (
-              <CategoryCard
-                key={Math.random() * new Date().getTime()}
-                item={item}
-                index={i}
-              />
-            ))}
-          </CustomTabPanel>
+              ))}
+            </CustomTabPanel>
+          </Box>
         </Box>
       </div>
     </>
